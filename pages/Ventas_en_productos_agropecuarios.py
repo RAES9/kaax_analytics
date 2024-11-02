@@ -42,6 +42,8 @@ requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.
 
 @st.cache_data
 def download_data():
+    ssl._create_default_https_context = ssl._create_unverified_context
+    
     csv_urls = []
     df_list = []
 
@@ -71,8 +73,6 @@ def download_data():
                         print(f"Error al procesar la URL {temp_url}: {e}")
     except RequestException as e:
         print(f"Error al obtener la página: {e}")
-
-    ssl._create_default_https_context = ssl._create_unverified_context
 
     for url in csv_urls:
         try:
