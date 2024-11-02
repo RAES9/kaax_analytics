@@ -16,8 +16,6 @@ import os
 import httpx
 import asyncio
 
-ssl._create_default_https_context = ssl._create_unverified_context
-
 dotenv_path = os.path.join('/config/config.env')
 load_dotenv(dotenv_path)
 
