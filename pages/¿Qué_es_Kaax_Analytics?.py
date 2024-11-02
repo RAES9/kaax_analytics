@@ -17,7 +17,7 @@ Kaax Analytics es una plataforma abierta al público diseñada para democratizar
 Con el uso de fuentes confiables como SENACYT, nuestro objetivo es ofrecer análisis complejos y modelos de predicción accesibles a todos.
 """)
 
-st.image("/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/imagen_agricola.jpg", caption="Innovando en la agricultura")
+st.image("imagen_agricola.jpg", caption="Innovando en la agricultura")
 
 st.subheader("¿Qué ofrecemos?")
 st.write("""
