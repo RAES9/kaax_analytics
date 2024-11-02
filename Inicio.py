@@ -2,11 +2,11 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Kaax Analytics",
-    page_icon="/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png",
+    page_icon="kaax_logo.png",
     layout="wide"
 )
 
-st.sidebar.image("/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png")
+st.sidebar.image("kaax_logo.png")
 
 st.markdown("""
 <style>
@@ -25,7 +25,7 @@ st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allo
 
 col1, col2 = st.columns([2, 1])
 with col1:
-    st.image("/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/agricultura_inicio.jpg")
+    st.image("agricultura_inicio.jpg")
 
 with col2:
     st.markdown("""
