@@ -34,14 +34,14 @@ def download_coverage():
     return data_downloaded
 
 
-@st.cache_resource
-def load_geojson():
-    gdf = gpd.read_file('/geoBoundaries-GTM-ADM1.geojson')
-    return gdf
+#@st.cache_resource
+#def load_geojson():
+    #gdf = gpd.read_file('/geoBoundaries-GTM-ADM1.geojson')
+    #return gdf
 
 
-geojson = load_geojson()
-geojson.to_crs(pyproj.CRS.from_epsg(4326), inplace=True)
+#geojson = load_geojson()
+#geojson.to_crs(pyproj.CRS.from_epsg(4326), inplace=True)
 
 with st.spinner('Cargando datos SENACYT...'):
     df_coverage = download_coverage()
@@ -130,13 +130,13 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.info("Este gráfico muestra cómo se distribuye la superficie según los diferentes niveles de uso de la tierra en cada departamento seleccionado.")
 
-df_coverage['DEPARTAMENTO'] = df_coverage['DEPARTAMENTO'].str.strip()
-geojson['shapeName'] = geojson['shapeName'].str.strip()
+#df_coverage['DEPARTAMENTO'] = df_coverage['DEPARTAMENTO'].str.strip()
+#geojson['shapeName'] = geojson['shapeName'].str.strip()
 
-df_filtered = df_coverage[df_coverage['Nivel_1'] == '2. Territorios agrícolas']
-superficie_por_departamento = df_coverage.groupby('DEPARTAMENTO')['SUPERFICIE (hectáreas)'].sum().reset_index()
+#df_filtered = df_coverage[df_coverage['Nivel_1'] == '2. Territorios agrícolas']
+#superficie_por_departamento = df_coverage.groupby('DEPARTAMENTO')['SUPERFICIE (hectáreas)'].sum().reset_index()
 
-merged_data = geojson.merge(superficie_por_departamento, left_on='shapeName', right_on='DEPARTAMENTO')
+#merged_data = geojson.merge(superficie_por_departamento, left_on='shapeName', right_on='DEPARTAMENTO')
 
 #geojson_json = json.loads(geojson.to_json())
 
