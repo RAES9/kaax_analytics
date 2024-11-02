@@ -62,7 +62,6 @@ st.sidebar.markdown(
     'Fuente: [SENACYT](https://catalogo.senacyt.gob.gt:80/en_GB/dataset/cobertura-vegetal-y-uso-de-la-tierra/resource/2545ac18-2a5a-4e22-9ad3-daa072569edc?inner_span=True)')
 
 st.title("Cobertura vegetal y uso de tierra")
-st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 hectareas_por_nivel = df_coverage.groupby('Nivel_1')['SUPERFICIE (hectáreas)'].sum()
 total_hectareas = hectareas_por_nivel.sum()
