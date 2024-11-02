@@ -2,11 +2,11 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Kaax Analytics",
-    page_icon="/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png",
+    page_icon="../kaax_logo.png",
     layout="wide"
 )
 
-st.sidebar.image("/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png")
+st.sidebar.image("../kaax_logo.png")
 
 st.title("¿Qué es Kaax Analytics?")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
