@@ -31,7 +31,7 @@ load_dotenv(dotenv_path)
 
 st.set_page_config(
     page_title="Kaax Analytics",
-    page_icon="/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png",
+    page_icon="../kaax_logo.png",
     layout="wide"
 )
 
