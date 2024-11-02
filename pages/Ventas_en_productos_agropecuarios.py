@@ -16,7 +16,7 @@ import os
 import httpx
 import asyncio
 
-dotenv_path = os.path.join('/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/config/config.env')
+dotenv_path = os.path.join('/config/config.env')
 load_dotenv(dotenv_path)
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
