@@ -36,7 +36,7 @@ def download_coverage():
 
 @st.cache_resource
 def load_geojson():
-    gdf = gpd.read_file('geoBoundaries-GTM-ADM1.geojson')
+    gdf = gpd.read_file('/geoBoundaries-GTM-ADM1.geojson')
     return gdf
 
 
