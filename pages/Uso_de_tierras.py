@@ -15,7 +15,7 @@ import json
 
 st.set_page_config(
     page_title="Kaax Analytics",
-    page_icon="/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/kaax_logo.png",
+    page_icon="../kaax_logo.png",
     layout="wide"
 )
 
@@ -34,7 +34,7 @@ def download_coverage():
 
 @st.cache_resource
 def load_geojson():
-    gdf = gpd.read_file('/Users/tribal/PycharmProjects/KaaxAnalitycs/kaax_analytics/geoBoundaries-GTM-ADM1.geojson')
+    gdf = gpd.read_file('../geoBoundaries-GTM-ADM1.geojson')
     return gdf
 
 
