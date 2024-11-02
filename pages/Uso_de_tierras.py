@@ -13,6 +13,8 @@ import geopandas as gpd
 import pyproj
 import json
 
+ssl._create_default_https_context = ssl._create_unverified_context
+
 st.set_page_config(
     page_title="Kaax Analytics",
     page_icon="../kaax_logo.png",
