@@ -417,3 +417,45 @@ def run_async_code(question, chat_history):
         result = loop.run_until_complete(get_response(question, chat_history))
         loop.close()
         return result
+
+#if 'chat_history' not in st.session_state:
+    #st.session_state['chat_history'] = ""
+#if 'reset_trigger' not in st.session_state:
+    #st.session_state['reset_trigger'] = 0
+
+#st.title("Chatbot Kaax")
+#st.subheader("Consultas Predefinidas")
+
+#type_request = st.selectbox(
+    #"Seleccione el tipo de consulta:",
+    #("Precio promedio por producto", "Precios por mercado", "Comparación de precios por fecha", "Disponibilidad de producto", "Listado de productos por mercado")
+#)
+
+#prompt = ""
+#if type_request == "Precio promedio por producto":
+    #producto = st.selectbox("Seleccione un Producto:", combined_df['Producto'].unique())
+    #medida = st.selectbox("Seleccione una medida:", combined_df[combined_df['Producto'] == producto]['Medida'].unique())
+    #prompt = f"¿Cuál es el precio promedio del {medida}/{producto}?"
+#elif type_request == "Precios por mercado":
+    #mercado = st.selectbox("Seleccione un Mercado:", combined_df['Mercado'].unique())
+    #prompt = f"Mostrar precios en el mercado {mercado}."
+#elif type_request == "Comparación de precios por fecha":
+    #fecha1 = st.date_input("Seleccione la primera fecha:")
+    #fecha2 = st.date_input("Seleccione la segunda fecha:")
+    #prompt = f"Comparar precios entre {fecha1} y {fecha2}."
+#elif type_request == "Disponibilidad de producto":
+    #producto = st.selectbox("Seleccione un Producto para verificar disponibilidad:", combined_df['Producto'].unique())
+    #prompt = f"¿Dónde está disponible el {producto} y cuánto cuesta?"
+#elif type_request == "Listado de productos por mercado":
+    #mercado = st.selectbox("Seleccione un Mercado para ver los productos disponibles:", combined_df['Mercado'].unique())
+    #prompt = f"Listar todos los productos disponibles en el mercado {mercado}."
+
+#prompt_modify = st.text_area("Modifique su consulta si lo desea:", prompt)
+
+#if st.button("Enviar Consulta"):
+    #custom_response = run_async_code(prompt_modify, st.session_state.get('chat_history', ''))
+    #st.session_state['chat_history'] += f"\n\nUsuario: {prompt_modify}\nKaax: {custom_response}"
+    #st.session_state['reset_trigger'] += 1
+
+#if 'chat_history' in st.session_state:
+    #st.text_area("Chat", value=st.session_state['chat_history'], height=300, disabled=True, key=f"chat_area_{st.session_state['reset_trigger']}")
