@@ -25,7 +25,7 @@ load_dotenv(dotenv_path)
     #raise ValueError("No se encontró OPENAI_API_KEY. Asegúrate de que esté en tu archivo .env.")
 
 #openai.api_key = OPENAI_API_KEY
-client = OpenAI()
+#client = OpenAI()
 
 st.set_page_config(
     page_title="Kaax Analytics",
