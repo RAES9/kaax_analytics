@@ -1,0 +1,10 @@
+streamlit
+plotly
+statsmodels
+requests
+beautifulsoup4
+pandas
+python-dotenv
+openai
+httpx
+asyncio
