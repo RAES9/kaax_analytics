@@ -19,12 +19,12 @@ import asyncio
 dotenv_path = os.path.join('/config/config.env')
 load_dotenv(dotenv_path)
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+#OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-if not OPENAI_API_KEY:
-    raise ValueError("No se encontró OPENAI_API_KEY. Asegúrate de que esté en tu archivo .env.")
+#if not OPENAI_API_KEY:
+    #raise ValueError("No se encontró OPENAI_API_KEY. Asegúrate de que esté en tu archivo .env.")
 
-openai.api_key = OPENAI_API_KEY
+#openai.api_key = OPENAI_API_KEY
 client = OpenAI()
 
 st.set_page_config(
