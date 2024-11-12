@@ -139,6 +139,8 @@ combined_df['Fecha'] = pd.to_datetime(combined_df['Fecha'], errors='coerce')
 current_date = datetime.now()
 date_12_months_ago = current_date - timedelta(days=365)
 
+combined_df['Precio'] = pd.to_numeric(combined_df['Precio'], errors='coerce')
+
 last_12_months_df = combined_df[(combined_df['Fecha'] >= date_12_months_ago) & (combined_df['Fecha'] <= current_date)]
 
 market_sales = last_12_months_df.groupby('Mercado')['Precio'].sum().sort_values(ascending=False)
